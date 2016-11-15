@@ -1,3 +1,19 @@
 <div>
     <h1>Hello Angular2</h1>
+    <!--
+    <h3>Id: {{hero.id}}</h3>
+    <h3>Name: {{hero.name}}</h3>
+    <input type="text" placeholder="Name" [(ngModel)]="hero.name" />
+    -->
+<!--    <h1 *ngIf="selectedHero">{{selectedHero.name}}</h1> -->
+    <navbar [navItems]="navItems"></navbar>
+    <input *ngIf="selectedHero" [(ngModel)]="selectedHero.name" type="text" placeholder="Name" />
+    <my-hero-detail [hero]="selectedHero" *ngIf="selectedHero"></my-hero-detail>
+    
+    <ul>
+        <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+            <h3>Id: {{hero.id}}</h3>
+            <h3>Name: {{hero.name}}</h3>
+        </li>
+    </ul>
 </div>

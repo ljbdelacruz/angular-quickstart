@@ -1,0 +1,12 @@
+<div>
+    <table>
+        <tr>
+            <td>
+                <h1 style="margin-right:100px;">FISH HAX</h1>
+            </td>
+            <td *ngFor="let nav of navItems">
+                <a (click)="onSelect(nav)" style="margin-right: 50px;">{{nav.label}}</a>
+            </td>
+        </tr>
+    </table>
+</div>
