@@ -9,15 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var hero_service_1 = require('./../../services/methods/hero.service');
 var HeroComponent = (function () {
-    function HeroComponent() {
+    function HeroComponent(heroService) {
+        this.heroService = heroService;
+        this.heroes = this.heroService.getHeroes();
     }
+    //this is how to create a function in typescript
+    HeroComponent.prototype.onSelect = function (hero) {
+        this.selectedHero = hero;
+    };
     HeroComponent = __decorate([
         core_1.Component({
             selector: 'hero-module',
             templateUrl: 'app/components/heroComponent/heroComponent.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [hero_service_1.HeroService])
     ], HeroComponent);
     return HeroComponent;
 }());

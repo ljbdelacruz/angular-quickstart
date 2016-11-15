@@ -15,14 +15,8 @@ var AppComponent = (function () {
     //this is how to create a variable in typescript
     function AppComponent(heroService) {
         this.heroService = heroService;
-        this.heroes = this.heroService.getHeroes();
-        //this fetches the data from heroService
         this.navItems = this.heroService.getNavItems();
     }
-    //this is how to create a function in typescript
-    AppComponent.prototype.onSelect = function (hero) {
-        this.selectedHero = hero;
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',

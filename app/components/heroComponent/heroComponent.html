@@ -1,3 +1,11 @@
 <div>
     <h1>Hi I am Hero Component</h1>
+    <my-hero-detail [hero]="selectedHero" *ngIf="selectedHero"></my-hero-detail>
+    <input *ngIf="selectedHero" [(ngModel)]="selectedHero.name" type="text" placeholder="Name" />
+    <ul>
+        <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+            <h3>Id: {{hero.id}}</h3>
+            <h3>Name: {{hero.name}}</h3>
+        </li>
+    </ul>    
 </div>
