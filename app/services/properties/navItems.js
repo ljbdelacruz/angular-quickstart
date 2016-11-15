@@ -1,3 +1,3 @@
 "use strict";
-exports.NavItems = [{ id: 1, label: 'Home', link: '' }, { id: 2, label: 'About Us', link: '' }, { id: 3, label: 'Contact Us', link: '' }];
+exports.NavItems = [{ id: 1, label: 'Home', link: '/home' }, { id: 3, label: 'Heroes', link: '/heroes' }];
 //# sourceMappingURL=navItems.js.map

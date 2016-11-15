@@ -9,11 +9,11 @@
     <navbar [navItems]="navItems"></navbar>
     <input *ngIf="selectedHero" [(ngModel)]="selectedHero.name" type="text" placeholder="Name" />
     <my-hero-detail [hero]="selectedHero" *ngIf="selectedHero"></my-hero-detail>
-    
     <ul>
         <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
             <h3>Id: {{hero.id}}</h3>
             <h3>Name: {{hero.name}}</h3>
         </li>
     </ul>
+    <router-outlet></router-outlet>
 </div>
