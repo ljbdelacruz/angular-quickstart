@@ -11,6 +11,9 @@ import { AppComponent }   from './app.component';
 import {HeroComponent} from './components/heroComponent/hero.component';
 import {HomeModule} from './components/Home/Home';
 
+
+//this is a boiler plate on where you will include all the components,services, modules
+//and routings that will be used for the website
 @NgModule({
   imports: [
     BrowserModule,
